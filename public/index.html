@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>IdeaSpark — AI Startup Idea Generator</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">IdeaSpark</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-inner">
+    <h1>AI-powered idea generation for founders</h1>
+    <p class="lead">Discover market-aligned startup ideas personalized to your skills and interests — validated, actionable, and pitch-ready.</p>
+    <a href="#demo" class="btn">Try the Demo</a>
+  </div>
+  <div class="bg-anim"></div>
+</header>
+
+<main>
+<section id="about" class="section">
+  <h2>About IdeaSpark</h2>
+  <p>Many entrepreneurs struggle to generate ideas that fit the market. IdeaSpark combines user inputs with market signals to produce validated startup concepts and a practical validation roadmap.</p>
+</section>
+
+<section id="services" class="section light">
+  <h2>Services</h2>
+  <div class="cards">
+    <div class="card"><h3><i class="fas fa-lightbulb"></i> Ideation Engine</h3><p>Personalized idea suggestions and variants.</p></div>
+    <div class="card"><h3><i class="fas fa-chart-line"></i> Market Signals</h3><p>Trend summaries and opportunity highlights.</p></div>
+    <div class="card"><h3><i class="fas fa-tachometer-alt"></i> Feasibility Score</h3><p>Quick assessment of an idea's potential.</p></div>
+  </div>
+</section>
+
+<section id="demo" class="section demo-section">
+  <h2>Interactive Idea Generator</h2>
+  <p>Enter your details and get a structured idea card with features, validation steps and impact.</p>
+  <form id="ideaForm" class="idea-form" autocomplete="off">
+    <input name="name" placeholder="Your name" required />
+    <input name="skills" placeholder="Skills (comma separated) e.g., Marketing, Python" />
+    <input name="interests" placeholder="Interests e.g., EdTech, LegalTech" />
+    <input name="industry" placeholder="Preferred industry (optional)" />
+    <div class="form-row">
+      <button type="submit" class="btn primary">Generate Idea</button>
+      <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+    </div>
+  </form>
+
+  <div id="ideaCard" class="idea-card hidden" role="region" aria-live="polite">
+    <header class="card-head">
+      <h3 id="ideaTitle">—</h3>
+      <div class="score" id="ideaScore">Feasibility: —</div>
+    </header>
+    <p class="elevator" id="ideaElevator"></p>
+    <p id="ideaDesc"></p>
+    <div class="features" id="ideaFeatures"></div>
+    <h4>Next Steps</h4>
+    <ol id="ideaSteps"></ol>
+    <h4>Impact</h4>
+    <p id="ideaImpact"></p>
+    <div class="card-actions">
+      <button id="saveIdea" class="btn">Save Idea</button>
+      <button id="newIdea" class="btn ghost">Generate Another</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ideaspark.team@gmail.com">ideaspark.team@gmail.com</a></p>
+  
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 IdeaSpark </p>
+    <div class="social">
+      <a href="#" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
